@@ -1,0 +1,31 @@
+package tests;
+
+import org.testng.Assert;
+import org.testng.annotations.Test;
+
+import base.BaseTest;
+import pages.*;
+
+public class testCases extends BaseTest {
+
+    @Test
+    public void verifyOrderFlow() {
+
+        LoginPage login = new LoginPage();
+        login.login("standard_user", "secret_sauce");
+
+        ProductsPage products = new ProductsPage();
+        Assert.assertEquals(products.getPageTitle(), "Products");
+
+        products.addProductToCart();
+        products.goToCart();
+
+        CartPage cart = new CartPage();
+        cart.clickCheckout();
+
+        CheckoutPage checkout = new CheckoutPage();
+        checkout.fillDetails("Komal", "Rawat", "201301");
+        checkout.clickContinue();
+        checkout.clickFinish();
+    }
+}
