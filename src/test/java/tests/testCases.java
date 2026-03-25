@@ -25,7 +25,10 @@ public class testCases extends BaseTest {
 
         CheckoutPage checkout = new CheckoutPage();
         checkout.fillDetails("Komal", "Rawat", "201301");
+        System.out.println("details added successfully");
         checkout.clickContinue();
+        System.out.println("continue click");
         checkout.clickFinish();
+        System.out.println("finish click");
     }
 }
