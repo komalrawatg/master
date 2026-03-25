@@ -3,13 +3,14 @@ pipeline {
 
     tools {
         maven 'Maven'
+        jdk 'Java'
     }
 
     stages {
 
         stage('Checkout Code') {
             steps {
-                git branch: 'master', url: 'https://github.com/komalrawatg/main.git'
+                git branch: 'main', url: 'https://github.com/komalrawatg/master.git'
             }
         }
 
