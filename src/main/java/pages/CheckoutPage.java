@@ -27,9 +27,11 @@ public class CheckoutPage {
 
     public void clickContinue() {
         WaitUtils.waitForElementClickable(continueBtn).click();
+        System.out.println("continue click");
     }
 
     public void clickFinish() {
         WaitUtils.waitForElementClickable(finishBtn).click();
+        System.out.println("finish click");
     }
 }

@@ -25,5 +25,21 @@ pipeline {
                 bat 'mvn test'
             }
         }
+
+        stage('Generate Report') {
+            steps {
+                bat 'mvn site'
+            }
+        }
+
+        stage('Publish Report') {
+            steps {
+                publishHTML([
+                    reportDir: 'target/site',
+                    reportFiles: 'surefire-report.html',
+                    reportName: 'Test Report'
+                ])
+            }
+        }
     }
 }

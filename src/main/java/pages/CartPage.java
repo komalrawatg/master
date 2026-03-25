@@ -17,5 +17,6 @@ public class CartPage {
 
     public void clickCheckout() {
         WaitUtils.waitForElementClickable(checkoutBtn).click();
+        System.out.println("user clicked checkout button");
     }
 }
