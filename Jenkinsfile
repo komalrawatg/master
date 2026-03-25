@@ -9,7 +9,7 @@ pipeline {
 
         stage('Checkout Code') {
             steps {
-                git branch: 'master', url: 'https://github.com/komalrawatg/master.git'
+                git branch: 'master', url: 'https://github.com/komalrawatg/main.git'
             }
         }
 
