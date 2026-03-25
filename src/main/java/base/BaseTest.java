@@ -1,6 +1,5 @@
 package base;
 
-import io.github.bonigarcia.wdm.config.Config;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
 import factory.DriverFactory;
