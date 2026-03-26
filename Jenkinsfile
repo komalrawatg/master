@@ -32,14 +32,17 @@ pipeline {
           }
       }
 
-      stage('Publish Report') {
-          steps {
-              publishHTML([
-                  reportDir: 'target/site',
-                  reportFiles: 'surefire-report.html',
-                  reportName: 'Test Report'
-              ])
-          }
-      }
+     stage('Publish Report') {
+         steps {
+             publishHTML(target: [
+                 allowMissing: false,
+                 alwaysLinkToLastBuild: true,
+                 keepAll: true,
+                 reportDir: 'target/site',
+                 reportFiles: 'surefire-report.html',
+                 reportName: 'Test Report'
+             ])
+         }
+     }
     }
 }
