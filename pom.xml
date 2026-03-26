@@ -21,7 +21,7 @@
             <version>4.18.1</version>
         </dependency>
 
-        <!-- TestNG (ONLY ONE) -->
+        <!-- TestNG -->
         <dependency>
             <groupId>org.testng</groupId>
             <artifactId>testng</artifactId>
@@ -38,6 +38,7 @@
 
     </dependencies>
 
+    <!-- Build plugins -->
     <build>
         <plugins>
             <plugin>
@@ -50,6 +51,7 @@
                     </includes>
                 </configuration>
             </plugin>
+
         </plugins>
     </build>
 

@@ -28,10 +28,9 @@ pipeline {
 
       stage('Generate Report') {
           steps {
-              bat 'mvn surefire-report:report'
+              bat 'mvn site'
           }
       }
-
      stage('Publish Report') {
          steps {
              publishHTML(target: [
