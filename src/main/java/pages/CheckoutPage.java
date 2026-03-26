@@ -17,7 +17,7 @@ public class CheckoutPage {
     private By lastName = By.id("last-name");
     private By postalCode = By.id("postal-code");
     private By continueBtn = By.id("continue");
-    private By finishBtn = By.id("finish");
+    private By finishBtn = By.xpath("//button[@id=\"finish\"]");
 
     public void fillDetails(String fName, String lName, String zip) {
         WaitUtils.waitForElementVisible(firstName).sendKeys(fName);
@@ -30,7 +30,8 @@ public class CheckoutPage {
         System.out.println("continue click");
     }
 
-    public void clickFinish() {
+    public void clickFinish() throws InterruptedException {
+        Thread.sleep(10);
         WaitUtils.waitForElementClickable(finishBtn).click();
         System.out.println("finish click");
     }

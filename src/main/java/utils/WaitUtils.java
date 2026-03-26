@@ -19,6 +19,7 @@ public class WaitUtils {
     }
 
     public static WebElement waitForElementClickable(By locator) {
+        WebDriverWait wait = new WebDriverWait(DriverFactory.getDriver(), Duration.ofSeconds(20));
         return wait.until(ExpectedConditions.elementToBeClickable(locator));
     }
 }
