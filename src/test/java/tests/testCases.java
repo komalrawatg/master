@@ -28,7 +28,7 @@ public class testCases extends BaseTest {
         System.out.println("details added successfully");
         checkout.clickContinue();
         System.out.println("continue click");
-        Thread.sleep(10);
+        Thread.sleep(20);
         checkout.clickFinish();
         System.out.println("finish click");
     }
