@@ -20,7 +20,7 @@ pipeline {
             }
         }
 
-        sstage('Run Tests & Generate Report') {
+        stage('Run Tests & Generate Report') {
              steps {
                  bat 'mvn clean test site'
              }
